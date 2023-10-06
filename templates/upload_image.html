@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+        <title>Image Colors</title>
+        <link rel="stylesheet" href="../static/upload_image_styles.css">
+  </head>
+  <body>
+        <h2>Upload Image to Extract Colour</h2>
+        {% if error == "true": %}
+            <h3>Invalid file upload or number of colors(you cannot exceed more than 30)</h3>
+        {% endif %}
+
+        <form enctype="multipart/form-data" method="POST">
+            <label for="file">Upload Image File:</label>
+            <input type="file" id="file" name="file">
+            <label for="range_num">Number of colors:</label>
+            <input type="text" id="range_num" name="range_num">
+            <input type="submit">
+        </form>
+  </body>
+</html>

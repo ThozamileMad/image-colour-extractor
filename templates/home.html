@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Image Color Extractor</title>
+        <link rel="stylesheet" href="../static/home-styles.css">
+    </head>
+    <body>
+        {% include "title.html" %}
+        <main>
+            <div class="instructions">
+                <h2> Instructions </h2>
+                <p> This website allows users to extract colours from uploaded pictures.</p>
+            </div>
+            <div>
+                <a class="main-button" href="{{ url_for('display', file='Mona_Lisa.jpg', range_num=10) }}">View Demo</a>
+                <a class="main-button" href="{{ url_for('upload', error='false') }}">Upload Image For Colour Extraction</a>
+             </div>
+        </main>
+    </body>
+</html>

@@ -1,15 +1,14 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
       <meta charset="UTF-8">
-        <title>Image Colors</title>
+        <title>Image Colours</title>
         <link rel="stylesheet" href="../static/upload_image_styles.css">
   </head>
   <body>
         <h2>Upload Image to Extract Colour</h2>
         {% if error == "true": %}
-            <h3>Invalid file upload or number of colors(you cannot exceed more than 30)</h3>
+            <h3>Invalid file upload or number of colors</h3>
         {% endif %}
 
         <form enctype="multipart/form-data" method="POST">

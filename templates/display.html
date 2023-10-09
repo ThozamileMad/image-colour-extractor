@@ -1,9 +1,8 @@
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Image Colors</title>
+        <title>Image Colours</title>
         <link rel="stylesheet" href="../static/styles.css">
     </head>
     <body>
@@ -19,18 +18,15 @@
                         </tr>
                     </thead>
                     <tbody>
-                        {% for code in codes: %}
+                        {% for tup in codes: %}
                             <tr>
-                                <td style="background-color: #{{ code }}; width: 70%">
-                                </td>
-                                <td>
-                                    <h3 class="color-code" style="color: grey;">#{{ code }}</h3>
-                                </td>
+                                <td style="background-color: #{{ tup[0] }}; width: 70%"></td>
+                                <td> <h3 class="color-code" style="color: grey;">#{{ tup[0] }}</h3> </td>
                             </tr>
                         {% endfor %}
                     </tbody>
                 </table>
-		        <a class="main-button" href="{{ url_for('upload', error='false') }}">Upload Image For Colour Extraction</a>
+		<a class="main-button" href="{{ url_for('upload', error='false') }}">Upload Image For Colour Extraction</a>
             </section>
         </main>
     </body>
